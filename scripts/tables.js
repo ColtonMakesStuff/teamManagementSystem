@@ -1,3 +1,5 @@
+const { DB_PASS } = require('./tempPass.js');
+
 const inquirer = require('inquirer')
 const mysql = require('mysql2');
 
@@ -10,7 +12,7 @@ const askTableQuestions = (questions) =>{
       const db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: DB_PASS,
         database: 'doof_evil_inc'
       });
     
