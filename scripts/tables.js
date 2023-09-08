@@ -12,7 +12,7 @@ const askTableQuestions = (questions) =>{
       const db = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: DB_PASS,
+        password: process.env.DB_PASSWORD,
         database: 'doof_evil_inc'
       });
     

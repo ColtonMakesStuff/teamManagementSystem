@@ -17,7 +17,7 @@ CREATE TABLE roles (
   
   FOREIGN KEY (role_dep_id) 
   REFERENCES departments(dep_id) 
-  ON DELETE SET NULL
+  ON DELETE CASCADE
 );
 
 CREATE TABLE employees (
@@ -28,7 +28,7 @@ CREATE TABLE employees (
 
   FOREIGN KEY (role_emp_id)
   REFERENCES roles(role_id) 
-  ON DELETE SET NULL
+  ON DELETE CASCADE
 );
 
 

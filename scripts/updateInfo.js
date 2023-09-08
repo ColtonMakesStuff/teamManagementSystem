@@ -1,3 +1,4 @@
+
 const { DB_PASS } = require('./tempPass.js');
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
@@ -134,7 +135,7 @@ const changeIt = (table, questions) => {
  const db = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: DB_PASS,
+            password: process.env.DB_PASSWORD,
             database: 'doof_evil_inc'
           });
 
@@ -169,7 +170,7 @@ const removeIt = (table, questions) => {
  const db = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: DB_PASS,
+            password: process.env.DB_PASSWORD,
             database: 'doof_evil_inc'
           });
 

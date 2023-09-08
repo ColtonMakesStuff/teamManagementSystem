@@ -1,4 +1,4 @@
-
+require("dotenv").config()
 const { handleUpdateEmpData, updateEmpRoleQuestions } = require('./scripts/employeeData.js');
 const { askTableQuestions } = require('./scripts/tables.js');
 const { handleUpdateInfo, updateQuestions, whichQuestion } = require('./scripts/updateInfo.js');
